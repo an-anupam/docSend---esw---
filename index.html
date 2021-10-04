@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocSend - Here For Easy File Sharing</title>
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="./resources/imgs/docsend.png" alt="DocSend logo" class="logo"> 
+
+    <section class="upload-container">
+        <div class="drop-zone">
+            <div class="icon-container">
+                <img src="./resources/imgs/upload icon.png" class="center"alt="uploaded icon" draggable="false">
+                <img src="./resources/imgs/upload icon.png" class="left"alt="uploaded icon" draggable="false">
+                <img src="./resources/imgs/upload icon.png" class="right"alt="uploaded icon" draggable="false">
+            </div>
+                <input type="file" id="fileInput">
+                <div class="title">Drag your documents here to start uploading or <span class="browseBtn">Browse</span>.
+                </div>
+
+       </div>
+
+       <div class="progress-container">
+          <div class="bg-progress"></div>
+          
+          <div class="inner-container">
+            <div class="title">Uploading...</div>
+          
+            <div class="percent-container"><span id="percent">0</span>%</div>
+      
+  
+         <div class="progress-bar"></div>
+          </div>
+         
+       </div>
+
+
+       <div class="sharing-container">
+            <p class="expire">Link Expires In 24 hrs</p>
+            <div class="input-container">
+                <input type="text"  id="fileURL" readonly >
+                <img src="./resources/imgs/copy-regular.svg"   alt="copy to clipboard" id="copyBtn">
+            </div>
+            <p>Or, Send Via Email</p>
+            <div class="email-container">
+                <form id=emailForm>
+                    <div class="filled">
+                        <label for="sender">Your Email</label>
+                        <input type="email" autocomplete="email" required name="from-email" id="sender">
+                    </div>
+
+                    <div class="filled">
+                        <label for="receiver">Receiver's Email</label>
+                        <input type="email" required autocomplete="receiver" name="to-email" id="receiver">
+                    </div>
+                    <div class="send-btn-container">
+                        <button type="submit" >Send</button>
+                    </div>
+                    
+                </form>
+            </div>
+       </div>
+
+
+    </section>
+    <div class="sideUploadImg"></div>
+
+    <div class="popUpCopy">Copied to clipboard</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
